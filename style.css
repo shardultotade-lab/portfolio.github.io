@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(-45deg, #0077b6, #90e0ef, #caf0f8, #48cae4);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+  color: #333;
+  line-height: 1.6;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+nav {
+  background: #023e8a;
+  padding: 0.8rem 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav li {
+  margin: 0 15px;
+}
+
+nav a {
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #00b4d8;
+}
+
+header {
+  background: linear-gradient(135deg, #0077b6, #00b4d8);
+  color: #fff;
+  text-align: center;
+  padding: 4rem 1rem;
+  animation: fadeInDown 1.2s ease-in-out;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+
+header p {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+}
+
+section {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+  color: #0077b6;
+  border-left: 5px solid #0077b6;
+  padding-left: 10px;
+  margin-bottom: 1rem;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  background: #e8f4fa;
+  margin: 0.5rem 0;
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+ul li:hover {
+  background: #caf0f8;
+}
+
+a {
+  color: #0077b6;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  color: #00b4d8;
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: #023e8a;
+  color: white;
+  margin-top: 3rem;
+  border-top: 3px solid #0077b6;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  section {
+    padding: 1.2rem;
+  }
+}
